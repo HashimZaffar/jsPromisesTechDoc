@@ -1,43 +1,49 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Open Sans', Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f0f2f5;
     color: #333;
 }
 
 header {
-    background-color: #1e90ff;
+    background: linear-gradient(135deg, #1e90ff, #1c75bc);
     color: white;
     padding: 20px 0;
     text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 15px 15px;
 }
 
 header h1 {
     margin: 0;
     font-size: 2.5em;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 
 header p {
-    margin: 0;
+    margin: 5px 0 0;
     font-size: 1.2em;
+    font-style: italic;
 }
 
 .sidebar {
     width: 250px;
-    background-color: #333;
+    background: linear-gradient(135deg, #333, #444);
     color: white;
     position: fixed;
     height: 100%;
     padding-top: 20px;
-    box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 0 6px rgba(0, 0, 0, 0.1);
+    border-radius: 0 15px 15px 0;
 }
 
 .sidebar ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
 }
 
 .sidebar ul li {
@@ -47,51 +53,67 @@ header p {
 .sidebar ul li a {
     color: white;
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 12px 20px;
     display: block;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .sidebar ul li a:hover {
     background-color: #575757;
+    transform: scale(1.05);
 }
 
 main {
     margin-left: 270px;
     padding: 20px;
     background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin: 40px auto;
 }
 
 main h2 {
-    border-bottom: 2px solid #1e90ff;
+    border-bottom: 3px solid #1e90ff;
     padding-bottom: 10px;
     margin-bottom: 20px;
     color: #1e90ff;
+    font-size: 1.8em;
+    font-weight: 600;
+    letter-spacing: 0.5px;
 }
 
 main p {
     margin-bottom: 20px;
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #555;
 }
 
 pre {
-    background-color: #f4f4f4;
-    padding: 10px;
+    background-color: #f9f9f9;
+    padding: 15px;
     border-left: 5px solid #1e90ff;
     overflow-x: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 code {
     font-family: 'Courier New', Courier, monospace;
-    color: #1e90ff;
+    color: #d63384;
 }
 
 footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 10px 0;
+    padding: 15px 0;
     position: fixed;
     width: 100%;
     bottom: 0;
     left: 0;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 15px 15px 0 0;
 }
