@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to JavaScript Promises</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>JavaScript Promises</h1>
+            <p>Your Guide to Asynchronous Programming in JavaScript</p>
+        </div>
+    </header>
+
+    <nav class="sidebar">
+        <ul>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#creating-promises">Creating Promises</a></li>
+            <li><a href="#consuming-promises">Consuming Promises</a></li>
+            <li><a href="#chaining-promises">Chaining Promises</a></li>
+            <li><a href="#error-handling">Error Handling</a></li>
+            <li><a href="#conclusion">Conclusion</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="introduction">
+            <h2>Introduction</h2>
+            <p>JavaScript Promises are a powerful way to handle asynchronous operations. Promises simplify code, improve readability, and make it easier to manage async tasks.</p>
+        </section>
+
+        <section id="creating-promises">
+            <h2>Creating Promises</h2>
+            <p>Promises are created using the <code>Promise</code> constructor. A promise represents an operation that hasn't completed yet, but is expected in the future.</p>
+            <pre><code class="language-javascript">
+const myPromise = new Promise((resolve, reject) => {
+    // Async operation here
+    if (operationSuccess) {
+        resolve('Operation successful');
+    } else {
+        reject('Operation failed');
+    }
+});
+            </code></pre>
+        </section>
+
+        <section id="consuming-promises">
+            <h2>Consuming Promises</h2>
+            <p>Promises can be consumed using the <code>.then()</code> and <code>.catch()</code> methods.</p>
+            <pre><code class="language-javascript">
+myPromise.then((result) => {
+    console.log(result);
+}).catch((error) => {
+    console.error(error);
+});
+            </code></pre>
+        </section>
+
+        <section id="chaining-promises">
+            <h2>Chaining Promises</h2>
+            <p>Promises can be chained together to handle sequences of asynchronous operations.</p>
+            <pre><code class="language-javascript">
+myPromise.then((result) => {
+    return anotherAsyncOperation(result);
+}).then((finalResult) => {
+    console.log(finalResult);
+}).catch((error) => {
+    console.error(error);
+});
+            </code></pre>
+        </section>
+
+        <section id="error-handling">
+            <h2>Error Handling</h2>
+            <p>Errors in promises can be handled using the <code>.catch()</code> method, which catches any errors that occur in the promise chain.</p>
+            <pre><code class="language-javascript">
+myPromise.catch((error) => {
+    console.error('An error occurred:', error);
+});
+            </code></pre>
+        </section>
+
+        <section id="conclusion">
+            <h2>Conclusion</h2>
+            <p>Promises are an essential tool in JavaScript for managing asynchronous operations. By understanding how to create and consume promises, you can write more efficient and maintainable code.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 Your Name. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
